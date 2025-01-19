@@ -1,22 +1,23 @@
-
-body {
+/* Light theme */
+body.light-theme {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
     background-color: #fff;
+    color: #000;
 }
-
 
 .content {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     background-color: #fff;
-    text-align: left; 
+    text-align: left;
+    /* background-color: #fff;
+    color: #000; */
 }
 
 .title h1 {
@@ -31,22 +32,48 @@ body {
 .title h2 {
     font-size: 16px;
     font-weight: bold;
-    color: #006EB6;
+    color: #008ae6;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 20px;
     text-align: center;
+    border-bottom: 1px solid #ccc;
+    width: 75%;
+    margin: 0 auto;
 }
 
 
 .intro {
     margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-.university-does {
-    padding-left: 40px;
-    margin: 20px 0;
+.uni_heading{
+    padding-left: 30px;
+    padding-right: 30px;
 }
+.university-does {
+    margin: 20px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/* Dark theme */
+body.dark-theme {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme .content {
+    background-color: #333;
+    color: #fff;
+}
+
 
 footer {
     text-align: center;
@@ -55,6 +82,6 @@ footer {
 
 .logo {
     width: 100px;
-    height: auto; 
+    height: auto;
     display: inline-block;
 }
