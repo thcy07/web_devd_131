@@ -32,9 +32,12 @@ header {
     text-align: center;
 }
 
+button{
+    all:unset;
+    color: var(--accent-color);
+}
 nav {
     text-align: center;
-    color: #5B1B1B;
     text-decoration: none;
     display: flex;
     justify-content: space-around;
@@ -51,9 +54,42 @@ nav a {
     align-self: center;
 }
 
+.imageViewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.imageViewer button.closeViewer {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 11;
+    display: block;
+}
+
+.imageViewer img.bigimg {
+    max-height: 90%;
+    width: auto;
+    max-width: 80%;
+    padding: 20px;
+}
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr;
     gap: 5px;
     padding: 20px;
     margin-left: 150px;
@@ -69,7 +105,7 @@ figure{
     align-items: center;
 }
 
-img {
+.galleryimg {
     max-width: 100%;
     width: 180px;
     height: 135px;
@@ -90,25 +126,51 @@ footer {
     /* bottom: 0; */
     width: 100%;
 }
-/* Default style for screens less than 500px */
-.gallery {
-    grid-template-columns: 1fr;
+
+.hide {
+    display: none;
 }
 
 @media screen and (min-width: 500px) {
     .gallery {
         grid-template-columns: 1fr;
     }
+   
+}
+@media screen and (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    button{
+      display: none;
+    }
+
+    .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    
+    }
+
 }
 
 @media screen and (min-width: 700px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+    /* nav {
+        display: block;
+    } */
 }
 
 @media screen and (min-width: 1000px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    button{
+        display: none;
     }
 }
