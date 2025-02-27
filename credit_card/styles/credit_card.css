@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #bdbdbd;
+    --secondary-color: #2790b0;
+    --accent-color: #473144;
+    --text-dark: #000000;
+    --text-light: #ebebeb;
+    --primary-font: "Merriweather", "Baskerville", 'Times New Roman', serif;
+    --secondary-font: "Arial", Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    background-color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    justify-items: center;
+}
+
+#credit_card_front {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#card_logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 30px;
+    background-color: #ff7043;
+    border-radius: 5px;
+}
+
+p {
+    grid-column: span 2;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card_number {
+    grid-column: 1 / span 2;
+    /* Make the div span 2 columns */
+}
+
+.card_number input {
+    width: 100%;
+    /* Ensure the input fills the entire grid area */
+}
+
+.card_number,
+.card_holder,
+.expiration_date {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+ 
+input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#expiration_date, #expiration_year{
+    display: inline;
+    /* grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr; */
+
+}
+
+.expiration_date input, p{
+    width: 40px;
+    grid-row: 2/3;
+    justify-items: center;
+}
+  
+.expiration_date p {
+    margin: 0;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--primary-font);
+}
+
+button:hover {
+    background-color: #1a6b89;
+}

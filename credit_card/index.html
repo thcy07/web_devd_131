@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card | Home </title>
+    <meta name="description" content="Home Page">
+    <meta name="author" content="Cameron Samson">
+    <link href="styles/credit_card.css" rel="stylesheet">
+    <script src="scripts/credit_card.js" rel="script" defer> </script>
+</head>
+<body>
+    <header>
+        <h1>Credit Card</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Card Information</h2>
+            <form >
+                <section id="credit_card_front">
+                    <p>Total: $199</p>
+                    <div id="card_logo"></div>
+
+                    <div class="card_number">
+                        <label for="card_number"> Card Number</label>
+                        <input type="text" id="card_number" name="card_number" placeholder="Card Number" required>
+                    </div>
+
+                    <div class="card_holder">
+                        <label for="card_holder"> Card Holder</label>
+                        <input type="text" id="card_holder" name="card_holder" placeholder="Card Holder" required>
+                    </div>
+
+                    <div class="expiration_date">
+                        <label for="expiration_date"> Expiration</label>
+                        <input type="text" id="expiration_date" name="expiration_date" placeholder="MM" required>
+                        <p>/</p>
+                        <input type="text" id="expiration_year" name="expiration_year" placeholder="YY" required>
+                    </div>
+
+                </section>
+
+                <section>
+                    <label for="security_code">CVC/CVV</label>
+                    <input type="text" id="security_code" name="security_code" placeholder="Security Code" required>
+                </section>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+       
+    </main>
+    <footer>
+        <p>&copy; 2020 Cameron Samson</p>
+    </footer>
+    
+</body>
+</html>
