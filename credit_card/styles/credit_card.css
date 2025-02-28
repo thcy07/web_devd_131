@@ -76,25 +76,21 @@ input {
     box-sizing: border-box;
 }
 
-#expiration_date, #expiration_year{
-    display: inline;
-    /* grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr; */
-
+.expiration_date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-self: center;
 }
 
-.expiration_date input, p{
+.expiration_date input {
     width: 40px;
-    grid-row: 2/3;
-    justify-items: center;
-}
-  
-.expiration_date p {
-    margin: 0;
-    font-weight: bold;
+    text-align: center;
+    margin-right: 5px;
+    
 }
 
-button {
+ button {
     margin-top: 20px;
     padding: 10px;
     background-color: var(--secondary-color);
