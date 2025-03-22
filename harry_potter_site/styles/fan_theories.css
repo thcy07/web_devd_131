@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    background-color: #143141;
+    /* color: ; */
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    /* background-color: #f6ead4; */
+    background-color: #D3AD28;
+    font-family: "Merriweather", "Baskerville", 'Times New Roman', serif ;
+    display: grid;
+    grid-template-columns: 95px auto;
+    margin: 0; 
+    padding: 0; 
+    
+}
+
+.logo{
+    width: 80px;
+    border-radius: 75%;
+}
+
+.logo_link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+#content{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav {
+    text-align: center;
+    color: #5B1B1B;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;  
+    }
+
+nav a {
+    color:#143141;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+    align-self: center;
+}
+nav a:hover{
+    background-color: #5B1B1B;
+    color: #f6ead4;
+}
+
+
+.fan_theory_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Container for the line */
+.line-container {
+    grid-column: 1/4; 
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50px; /* Adjust height as needed */
+    font-family: "Merriweather";
+    text-align: center;
+}
+
+/* Horizontal line */
+.line-container::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 20%;
+    right: 20%;
+    height: 5px; /* Thickness of the line */
+    background-color: #5B1B1B; /* Line color */
+    z-index: 1;
+}
+
+/* Circle in the center */
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #143141; /* Background color */
+    border: 5px solid #5B1B1B; /* Border color */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Place above the line */
+    margin: 0 auto;
+}
+
+/* Number inside the circle */
+.circle span {
+    color: #fff; /* Text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold;
+}
+
+
+.fan_theory1_card{
+    grid-column: 1/2;
+    text-align: center;
+    padding-left: 20px;
+    margin-top: 60px;
+}
+
+
+
+.character1_msg {
+    grid-column: 2/4;
+    font-family: "Merriweather";
+    padding: 20px;
+    font-size: large;
+    color: #D3AD28;
+}
+
+.fan_theory1_title{
+    grid-column: 1/4;
+    text-align: center;
+    font-family: "Merriweather";
+    color: #D3AD28;
+}
+.character1_msg p {
+    font-family: "Libre Baskerville";
+    
+}
+
+.fan_theory2_card {
+    grid-column: 3/4;
+    padding-right: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.character2_msg {
+    grid-column: 1/3;
+    grid-row: 6/7;
+    font-family: "Merriweather";
+    padding: 20px;
+    margin-top: 20px;
+    font-size: large;
+    color: #D3AD28;
+}
+
+.character2_msg p {
+    font-family: "Libre Baskerville";
+}
+
+.fan_theory3_card {
+    grid-column: 1/2;
+    text-align: center;
+    padding-left: 20px;
+    margin-top: 70px;
+}
+
+.character3_msg {
+    grid-column: 2/4;
+    font-family: "Merriweather";
+    padding: 20px;
+    margin-top: 20px;
+    font-size: large;
+    color: #D3AD28;
+
+}
+
+.character3_msg p {
+    font-family: "Libre Baskerville";
+}
+
+
+footer{
+    text-align: center;
+    background-color: #D3AD28;  
+    color: #143141;
+    font-family: "Merriweather";
+    padding: 2px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+footer .footer_link{
+    color: #143141;
+    text-decoration: none;
+    padding: 10px 20px;
+
+}
+.logo{
+    width: 80px;
+    border-radius: 75%;
+}
+
+#logo_link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+footer .footer_link:hover{
+    background-color:  #5B1B1B;
+    color: #f6ead4;
+    border-radius: 5px;
+
+}
+footer .social img {
+    padding-top: 15px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    #hero-msg h1 {
+        color: #6f7364;
+    }
+    .home-title {
+        font-size: 25px;
+    }
+    .rivers-card, .camping-card, .rapids-card { 
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .mountains, .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
+}
