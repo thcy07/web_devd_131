@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies Information</title>
     <link href="styles/movie_info.css" rel="stylesheet">
-    <script defer src="scripts/movie.js"></script>
+    <script type="module" src="scripts/search.js"></script>
+    <script type="module" src="scripts/movies.js"></script>
 </head>
 <body>
     <header>
@@ -14,9 +15,12 @@
         </a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="character_profile.html">Character Profiles</a>
+            <a href="characters_profile.html">Character Profiles</a>
             <a href="fan_theories.html">Fan Theories</a>
             <a href="contact_us.html">Contact Us</a>
+            <div class="search_button">
+                <input type="search" id="search" name="search" placeholder="Search...">
+            </div>
         </nav>
     </header>
     <main>

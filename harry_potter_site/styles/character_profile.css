@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+:root {
+    --primary-color: #5B1B1B;
+    --secondary-color: #D3AD28;
+    --accent1-color: #143141;
+    --accent2-color: #195458;
+    --accent3-color: #f6ead4;
+
+    --text-dark: #AF1B3F;
+    --text-light: #ebebeb;
+    --heading-font: "Libre Baskerville", serif;
+    --paragraph-font: "Merriweather";
+
+    --headline-color-on-white: #195458;
+    --headline-color-on-color: #D3AD28;
+    --paragraph-color-on-white: #143141;
+    --paragraph-color-on-color: #D3AD28;
+    --paragraph-background-color: #5B1B1B;
+    --nav-link-color: #5B1B1B;
+    --nav-background-color: #D3AD28;
+    --nav-hover-link-color: #f6ead4;
+    --nav-hover-background-color: #143141;
+}
+
 body{
-    background-color: #143141;
+    background-color: var(--accent1-color);
     /* color: ; */
     margin: 0;
     padding: 0;
@@ -9,7 +32,7 @@ body{
 
 header{
     /* background-color: #f6ead4; */
-    background-color: #D3AD28;
+    background-color: var(--secondary-color);
     font-family: "Merriweather", "Baskerville", 'Times New Roman', serif ;
     display: grid;
     grid-template-columns: 95px auto;
@@ -36,14 +59,14 @@ header{
 
 nav {
     text-align: center;
-    color: #5B1B1B;
+    color: var(--nav-link-color);
     text-decoration: none;
     display: flex;
     justify-content: space-around;  
     }
 
 nav a {
-    color:#143141;
+    color: var(--accent1-color);
     text-decoration: none;
     padding: 15px;
     border-radius: 5px;
@@ -53,10 +76,29 @@ nav a {
     align-self: center;
 }
 nav a:hover{
-    background-color: #5B1B1B;
-    color: #f6ead4;
+    background-color: var(--nav-link-color);
+    color: var(--nav-hover-link-color);
 }
 
+#search {
+    width: 80%;
+    max-width: 300px;
+    height: 35px;
+    padding: 15px;
+    margin-top: 25px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1em;
+    font-family: var(--heading-font);
+    background-color: var(--secondary-color);
+    text-align: center;
+    align-self: center;
+}
+
+
+#search::placeholder {
+    color: var(--accent1-color);
+}
 
 .character_profile_grid{
     display: grid;
@@ -68,7 +110,7 @@ nav a:hover{
 .character_card {
     font-family: "Merriweather";
     margin: 25px 0;
-    background-color: #195458;
+    background-color: var(--accent2-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
     width: 100%;
@@ -84,7 +126,7 @@ nav a:hover{
 }
 
 .name{
-    color: #D3AD28;
+    color: var(--secondary-color);
 }
 
 .character_msg {
@@ -95,7 +137,7 @@ nav a:hover{
     height: 100%;
     opacity: 0; /* Start invisible */
     background-color: rgba(211, 173, 40, 0.7); /* Semi-transparent gold */
-    color: #5B1B1B;
+    color: var(--nav-link-color);
     display: flex; /* Center content */
     flex-direction: column;
     justify-content: center;
@@ -111,8 +153,8 @@ nav a:hover{
 
 footer{
     text-align: center;
-    background-color: #D3AD28;  
-    color: #143141;
+    background-color: var(--secondary-color);  
+    color: var(--accent1-color);
     font-family: "Merriweather";
     padding: 2px 50px;
     display: flex;
@@ -122,7 +164,7 @@ footer{
 }
 
 footer .footer_link{
-    color: #143141;
+    color: var(--accent1-color);
     text-decoration: none;
     padding: 10px 20px;
 
@@ -138,8 +180,8 @@ footer .footer_link{
     align-self: center;
 }
 footer .footer_link:hover{
-    background-color:  #5B1B1B;
-    color: #f6ead4;
+    background-color:  var(--nav-link-color);
+    color: var(--nav-hover-link-color);
     border-radius: 5px;
 
 }

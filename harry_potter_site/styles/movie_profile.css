@@ -1,49 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-body{
-    background-color: #143141;
+:root {
+    --primary-color: #5B1B1B;
+    --secondary-color: #D3AD28;
+    --accent1-color: #143141;
+    --accent2-color: #195458;
+    --accent3-color: #f6ead4;
+
+    --text-dark: #AF1B3F;
+    --text-light: #ebebeb;
+    --heading-font: "Libre Baskerville", serif;
+    --paragraph-font: "Merriweather";
+
+    --headline-color-on-white: #195458;
+    --headline-color-on-color: #D3AD28;
+    --paragraph-color-on-white: #143141;
+    --paragraph-color-on-color: #D3AD28;
+    --paragraph-background-color: #5B1B1B;
+    --nav-link-color: #5B1B1B;
+    --nav-background-color: #D3AD28;
+    --nav-hover-link-color: #f6ead4;
+    --nav-hover-background-color: #143141;
+}
+
+body {
+    background-color: var(--accent1-color);
     /* color: ; */
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     /* background-color: #f6ead4; */
-    background-color: #D3AD28;
-    font-family: "Merriweather", "Baskerville", 'Times New Roman', serif ;
+    background-color: var(--secondary-color);
+    font-family: "Merriweather", "Baskerville", 'Times New Roman', serif;
     display: grid;
     grid-template-columns: 95px auto;
-    margin: 0; 
-    padding: 0; 
-    
+    margin: 0;
+    padding: 0;
 }
 
-.logo{
+.logo {
     width: 80px;
     border-radius: 75%;
 }
 
-.logo_link{
+.logo_link {
     padding-top: 5px;
     justify-self: center;
     align-self: center;
 }
 
-#content{
+#content {
     max-width: 1600px;
     margin: 0 auto;
 }
 
 nav {
     text-align: center;
-    color: #5B1B1B;
+    color: var(--nav-link-color);
     text-decoration: none;
     display: flex;
-    justify-content: space-around;  
-    }
+    justify-content: space-around;
+}
 
 nav a {
-    color:#143141;
+    color: var(--accent1-color);
     text-decoration: none;
     padding: 15px;
     border-radius: 5px;
@@ -52,13 +74,33 @@ nav a {
     text-align: center;
     align-self: center;
 }
-nav a:hover{
-    background-color: #5B1B1B;
-    color: #f6ead4;
+
+nav a:hover {
+    background-color: var(--nav-link-color);
+    color: var(--nav-hover-link-color);
+}
+
+#search {
+    width: 80%;
+    max-width: 300px;
+    height: 35px;
+    padding: 15px;
+    margin-top: 25px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1em;
+    font-family: var(--heading-font);
+    background-color: var(--secondary-color);
+    text-align: center;
+    align-self: center;
 }
 
 
-.movie_profile_grid{
+#search::placeholder {
+    color: var(--accent1-color);
+}
+
+.movie_profile_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 15px;
@@ -68,13 +110,12 @@ nav a:hover{
 .movie_card {
     font-family: "Merriweather";
     margin: 25px 0;
-    background-color: #195458;
+    background-color: var(--accent2-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
     width: 100%;
     text-decoration: none;
     text-align: center;
-    
 }
 
 .movie_card img {
@@ -83,8 +124,8 @@ nav a:hover{
     height: auto; /* Maintain aspect ratio */
 }
 
-.name{
-    color: #D3AD28;
+.name {
+    color: var(--headline-color-on-color);
 }
 
 .movie_msg {
@@ -95,7 +136,7 @@ nav a:hover{
     height: 100%;
     opacity: 0; /* Start invisible */
     background-color: rgba(211, 173, 40, 0.7); /* Semi-transparent gold */
-    color: #5B1B1B;
+    color: var(--nav-link-color);
     display: flex; /* Center content */
     flex-direction: column;
     justify-content: center;
@@ -108,41 +149,40 @@ nav a:hover{
     opacity: 1; /* Show the overlay on hover */
 }
 
-
-footer{
+footer {
     text-align: center;
-    background-color: #D3AD28;  
-    color: #143141;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
     font-family: "Merriweather";
     padding: 2px 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
 
-footer .footer_link{
-    color: #143141;
+footer .footer_link {
+    color: var(--accent1-color);
     text-decoration: none;
     padding: 10px 20px;
-
 }
-.logo{
+
+.logo {
     width: 80px;
     border-radius: 75%;
 }
 
-#logo_link{
+#logo_link {
     padding-top: 5px;
     justify-self: center;
     align-self: center;
 }
-footer .footer_link:hover{
-    background-color:  #5B1B1B;
-    color: #f6ead4;
-    border-radius: 5px;
 
+footer .footer_link:hover {
+    background-color: var(--nav-link-color);
+    color: var(--nav-hover-link-color);
+    border-radius: 5px;
 }
+
 footer .social img {
     padding-top: 15px;
 }
@@ -151,47 +191,36 @@ footer .social img {
     text-decoration: none;
 }
 
-
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
-        display: block;
-        height: auto;
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-    nav, footer {
+    nav {
         flex-direction: column;
     }
     nav a {
         display: block;
-        padding: 15px;
+        padding: 10px;
+        margin: 5px 0;
     }
-    #hero {
-        margin-top: 0;
+    .movie_profile_grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
-    #hero-msg {
-        margin-top: 0;
-    }
-    #hero-msg h4 {
-        display: none;
-    }
-    #hero-msg h1 {
-        color: #6f7364;
-    }
-    .home-title {
-        font-size: 25px;
-    }
-    .rivers-card, .camping-card, .rapids-card { 
-        margin: 50px auto;
-        width: 60%;
-    }
-    #background {
-        display: none;
-    }
-    .mountains, .msg {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
+    .movie_card {
+        margin: 15px auto;
+        width: 90%;
     }
     footer {
-        margin-top: 25movie
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .footer_link {
+        margin: 5px 0;
+    }
+    #search {
+        width: 90%;
+        margin: 15px auto;
     }
 }

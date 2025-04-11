@@ -1,8 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const characterName = urlParams.get("name");
 
-    const characters = {
+    export const movies = {
         Philosophers_Stone: {
             name: "Harry Potter and the Philosopher's Stone",
             image: "images/philosophers-stone-theatrical-poster.jpg",
@@ -617,16 +614,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
         
     };  
-
-    if (characters[characterName]) {
-        const character = characters[characterName];
-        document.getElementById("movie_name").textContent = character.name;
-        document.getElementById("movie_image").src = character.image;
-        document.getElementById("movie_image").alt = character.name;
-        document.getElementById("movie_info").innerHTML = character.description;
-        document.getElementById("movie_intro").innerHTML = character.intro;
-    } else {
-        document.getElementById("movie_name").textContent = "Character Not Found";
-        document.getElementById("movie_info").textContent = "We couldn't find information about this character.";
-    }
-});
