@@ -1,3 +1,8 @@
+// The search.js file is not perfect, but it can respond to searches made with the right spelling.
+// It can search for movies and characters, but it does not handle typos or partial matches well.
+// It is a basic implementation that can be improved with more advanced search algorithms or libraries.
+// It will respond only to an keydown event with the Enter key pressed. 
+
 import { movies } from './movies_export.js';
 import { characters } from './characters_export.js';
 
